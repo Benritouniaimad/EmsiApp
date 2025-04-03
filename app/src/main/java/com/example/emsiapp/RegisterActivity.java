@@ -61,7 +61,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     }
 
-    public void redirect(View view) {
+    public void redirectToLogin(View view) {
         Intent intent = new Intent(RegisterActivity.this, Login.class);
         startActivity(intent);
     }
