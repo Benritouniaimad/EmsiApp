@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">EmsiApp</string>
+    <string name="register_text">Don\'t have an account? Register</string>
+    <string name="login_text">Press to Logn in </string>
 </resources>

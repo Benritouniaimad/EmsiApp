@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "89642139219",
+    "project_id": "emsiapp-9585a",
+    "storage_bucket": "emsiapp-9585a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:89642139219:android:d809256afc2f19003ed0a6",
+        "android_client_info": {
+          "package_name": "com.example.emsiapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCREE0Wqd4ps_NkEnQCKDmt1Zd94JroEjc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

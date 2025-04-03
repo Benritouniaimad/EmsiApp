@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <solid android:color="#FFFFFF"/> <!-- Fond blanc -->
-    <corners android:radius="5dp"/> <!-- Coins arrondis -->
-    <stroke android:color="#E0E0E0" android:width="2dp"/> <!-- Bordure grise -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="#EEEEEE"/>
+    <corners android:radius="30dp"/>
+    <padding android:left="30dp" android:right="10dp" android:top="10dp"
+        android:bottom="10dp"/>
 </shape>
