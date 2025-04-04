@@ -40,7 +40,8 @@
         android:id="@+id/name"
         android:layout_width="300dp"
         android:layout_height="50dp"
-
+        android:drawableStart="@drawable/baseline_person_24"
+        android:drawablePadding="10dp"
         android:background="@drawable/input_background"
         android:hint="Nom et Prenom"
         android:layout_gravity="center"
@@ -48,6 +49,8 @@
         android:padding="10dp"
         android:layout_marginTop="20dp"
         />
+
+    <!-- Champ Mot de passe -->
 
     <EditText
         android:id="@+id/et_email"
@@ -62,7 +65,6 @@
         android:inputType="textEmailAddress"
         android:padding="10dp" />
 
-    <!-- Champ Mot de passe -->
     <EditText
         android:id="@+id/et_password"
         android:layout_width="300dp"
@@ -70,6 +72,8 @@
         android:layout_marginTop="20dp"
         android:layout_gravity="center"
         android:background="@drawable/input_background"
+        android:drawableStart="@drawable/baseline_person_24"
+        android:drawablePadding="10dp"
         android:hint="Enter your Password"
         android:inputType="textPassword"
         android:padding="10dp" />
@@ -81,6 +85,8 @@
         android:layout_marginTop="20dp"
         android:layout_gravity="center"
         android:background="@drawable/input_background"
+        android:drawableStart="@drawable/baseline_person_24"
+        android:drawablePadding="10dp"
         android:hint="Verify your Password"
         android:inputType="textPassword"
         android:padding="10dp" />
