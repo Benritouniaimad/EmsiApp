@@ -1,83 +1,161 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-
+    android:background="@drawable/photo2"
     tools:context=".Login">
 
+    <!-- Overlay semi-transparent pour améliorer la lisibilité -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000" />
 
-    <!-- Logo -->
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="386dp"
-        android:layout_height="202dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="70dp"
-        android:src="@drawable/logoemsi" />
-
-    <!-- Texte de Login-->
-
-    <TextView
-        android:layout_width="wrap_content"
+    <!-- Conteneur blanc arrondi -->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:text="Sign In"
-        android:textColor="@color/black"
-        android:textSize="24sp"
-        android:textStyle="bold" />
-    <!-- Champ Email -->
-    <!-- Champ Mot de passe -->
+        android:layout_centerInParent="true"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/rounded_container_background"
+        android:orientation="vertical"
+        android:padding="20dp">
 
-    <EditText
-        android:id="@+id/et_email"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/input_background"
-        android:hint="Enter Email or Username"
-        android:inputType="textEmailAddress"
-        android:padding="10dp" />
+        <!-- Titre de l'app -->
 
-    <!-- Bouton de connexion -->
-    <EditText
-        android:id="@+id/et_password"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/input_background"
-        android:hint="Enter your Password"
-        android:inputType="textPassword"
-        android:padding="10dp" />
+        <!-- Sous-titre ou slogan -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="serif"
+            android:text="Emsi Smart Presence"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/btn_login"
-        android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:text="Login"
-        android:layout_gravity="center"
-        android:textSize="20sp"
-        android:textColor="@color/white"
-        android:backgroundTint="@color/blue"
-        android:layout_marginTop="20dp"/>
-    <!-- Champ Register-->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Don't have account?Sign up"
-        android:textSize="20sp"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:paddingBottom="20dp"
-        android:paddingTop="5dp"
-        android:onClick="redirectToRegister"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="sans-serif-light"
+            android:text="L'innovation et l'intelligence au service de la gestion des présences."
+            android:textAlignment="center"
+            android:textColor="@color/dark_green"
+            android:textSize="16sp" />
 
-</LinearLayout>
+        <!-- Texte de Login -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:fontFamily="serif"
+            android:text="Welcome Back!"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:text="Sign in to continue"
+            android:textColor="@color/dark_gray"
+            android:textSize="16sp" />
+
+        <!-- Champ Email -->
+        <EditText
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/input_background_white"
+            android:drawableStart="@drawable/ic_email"
+            android:drawablePadding="10dp"
+            app:drawableTint="@color/dark_green"
+            android:hint="Enter Email or Username"
+            android:inputType="textEmailAddress"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp" />
+
+        <!-- Champ Mot de passe -->
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/input_background_white"
+            android:drawableStart="@drawable/ic_lock"
+            android:drawablePadding="10dp"
+            app:drawableTint="@color/dark_green"
+            android:hint="Enter your Password"
+            android:inputType="textPassword"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp" />
+
+        <!-- Texte "Mot de passe oublié" -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="Forgot your password?"
+            android:textColor="@color/dark_green"
+            android:textSize="14sp" />
+
+        <!-- Bouton de connexion -->
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="25dp"
+            android:backgroundTint="@color/blue"
+            android:text="Login"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <!-- Texte d'inscription -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:onClick="redirectToRegister"
+            android:text="Don't have account? Sign up"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:minHeight="48dp"
+            android:minWidth="48dp"
+            android:gravity="center"
+            android:padding="8dp" />
+
+    </LinearLayout>
+
+    <!-- Bouton de fermeture -->
+    <ImageButton
+        android:id="@+id/btn_close"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        android:background="@drawable/circle_background"
+        android:contentDescription="Close button"
+        android:padding="8dp"
+        android:src="@drawable/ic_close"
+        app:tint="@color/dark_gray" />
+
+</RelativeLayout>
