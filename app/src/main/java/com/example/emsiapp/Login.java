@@ -48,7 +48,10 @@ public class Login extends AppCompatActivity {
             if (task.isSuccessful()) {
                 // Connexion réussie
                 Toast.makeText(Login.this, "Connexion réussie", Toast.LENGTH_SHORT).show();
-                // Redirige vers une autre activité si nécessaire
+                // Redirection vers la page d'accueil (HomeActivity)
+                Intent intent = new Intent(Login.this, HomeActivity.class); // Remplace HomeActivity par le nom de ta page d'accueil
+                startActivity(intent);
+                finish();  // Empêcher de revenir à la page de connexion avec le bouton retour
             } else {
                 // Erreur de connexion
                 Toast.makeText(Login.this, "Erreur: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
