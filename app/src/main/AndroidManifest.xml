@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-
     <!-- Permissions requises pour la localisation et Internet -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -17,35 +16,36 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.EmsiApp"
-        tools:targetApi="31"> <!-- Peut être supprimé si non nécessaire -->
+        tools:targetApi="31">
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false" />
 
+        <activity
+            android:name=".MarkAbsenceActivity"
+            android:exported="false" /> <!-- Peut être supprimé si non nécessaire -->
         <!-- Activité de connexion principale (LoginActivity) -->
         <activity
             android:name=".MapActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <!-- Autres activités -->
-
+        </activity> <!-- Autres activités -->
         <activity
-            android:name=".HomeActivity"
+            android:name=".Login"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".RegisterActivity"
-            android:exported="false" />
-
-        <!-- Ajout de la clé API de Google Maps -->
+            android:exported="false" /> <!-- Ajout de la clé API de Google Maps -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key" />
-
+            android:value="@string/google_maps_key"/>
     </application>
 
 </manifest>

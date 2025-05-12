@@ -17,6 +17,7 @@ import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.PolylineOptions;
 
 public class MapActivity extends AppCompatActivity implements OnMapReadyCallback {
 
@@ -51,6 +52,17 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         mMap.addMarker(new MarkerOptions().position(place).title("Marker in Rabat"));
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(place, 12)); // Zoom sur l'endroit
 
+        // Ajouter les marqueurs pour chaque site EMSI
+        LatLng[] emsiSites = {
+                new LatLng(33.589886, -7.603869), // EMSI Casablanca
+                new LatLng(34.020882, -6.841650), // EMSI Rabat
+                new LatLng(31.634224, -8.006386)  // EMSI Marrakech
+        };
+
+        for (LatLng site : emsiSites) {
+            mMap.addMarker(new MarkerOptions().position(site).title("EMSI Site"));
+        }
+
         // Vérifier les permissions de localisation
         if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION)
                 == PackageManager.PERMISSION_GRANTED) {
@@ -73,6 +85,9 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
                             LatLng userLocation = new LatLng(location.getLatitude(), location.getLongitude());
                             mMap.addMarker(new MarkerOptions().position(userLocation).title("Your Location"));
                             mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(userLocation, 15)); // Zoom sur la position actuelle
+
+                            // Appeler la fonction pour afficher l'itinéraire vers un site EMSI
+                            showRouteToEMSI(userLocation, new LatLng(33.589886, -7.603869)); // Exemple vers EMSI Casablanca
                         } else {
                             Toast.makeText(this, "Unable to get current location", Toast.LENGTH_SHORT).show();
                         }
@@ -80,6 +95,18 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         } else {
             Toast.makeText(this, "Permission required to access location", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    // Fonction pour afficher l'itinéraire depuis la position actuelle vers un site EMSI
+    private void showRouteToEMSI(LatLng userLocation, LatLng destination) {
+        // Exemple simple pour dessiner une polyline entre les deux points
+        PolylineOptions polylineOptions = new PolylineOptions()
+                .add(userLocation)
+                .add(destination)
+                .width(5)
+                .color(0xFF0000FF); // Bleu
+
+        mMap.addPolyline(polylineOptions);
     }
 
     @Override
