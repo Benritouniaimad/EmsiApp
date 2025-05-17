@@ -26,7 +26,7 @@
             android:exported="false" /> <!-- Peut être supprimé si non nécessaire -->
         <!-- Activité de connexion principale (LoginActivity) -->
         <activity
-            android:name=".MapActivity"
+            android:name=".Login"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -35,11 +35,9 @@
             </intent-filter>
         </activity> <!-- Autres activités -->
         <activity
-            android:name=".Login"
+            android:name=".MapActivity"
             android:exported="false" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="false" />
+
         <activity
             android:name=".RegisterActivity"
             android:exported="false" /> <!-- Ajout de la clé API de Google Maps -->
