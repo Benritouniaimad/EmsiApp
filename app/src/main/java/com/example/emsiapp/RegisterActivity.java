@@ -10,64 +10,72 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class RegisterActivity extends AppCompatActivity {
 
     private EditText etFullName, etEmail, etPassword, etConfirmPassword;
     private FirebaseAuth mAuth;
+    private FirebaseFirestore db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        // Initialisation de FirebaseAuth
         mAuth = FirebaseAuth.getInstance();
+        db = FirebaseFirestore.getInstance();
 
-        // Initialisation des EditText
         etFullName = findViewById(R.id.name);
         etEmail = findViewById(R.id.et_email);
         etPassword = findViewById(R.id.et_password);
         etConfirmPassword = findViewById(R.id.et_password2);
 
-        // Set OnClickListener pour le bouton d'enregistrement
-        findViewById(R.id.register).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                registerUser();
-            }
-        });
+        findViewById(R.id.register).setOnClickListener(v -> registerUser());
     }
 
     private void registerUser() {
-        String Name = etFullName.getText().toString().trim();
+        String fullName = etFullName.getText().toString().trim();
         String email = etEmail.getText().toString().trim();
         String password = etPassword.getText().toString().trim();
         String confirmPassword = etConfirmPassword.getText().toString().trim();
 
-        // Vérifier si tous les champs sont remplis
-        if (Name.isEmpty() || email.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()) {
+        if (fullName.isEmpty() || email.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()) {
             Toast.makeText(RegisterActivity.this, "Veuillez remplir tous les champs", Toast.LENGTH_SHORT).show();
             return;
         }
 
-        // Vérifier si les mots de passe correspondent
         if (!password.equals(confirmPassword)) {
             Toast.makeText(RegisterActivity.this, "Les mots de passe ne correspondent pas", Toast.LENGTH_SHORT).show();
             return;
         }
 
-        // Utilisation de Firebase Authentication pour créer un utilisateur
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, task -> {
                     if (task.isSuccessful()) {
-                        // Inscription réussie
                         FirebaseUser user = mAuth.getCurrentUser();
-                        Toast.makeText(RegisterActivity.this, "Inscription réussie!", Toast.LENGTH_SHORT).show();
-                        // Rediriger vers la page de connexion
-                        startActivity(new Intent(RegisterActivity.this, Login.class));
+                        if (user != null) {
+                            String uid = user.getUid();
+
+                            // Créer une entrée dans la collection "professeurs"
+                            Map<String, Object> data = new HashMap<>();
+                            data.put("nom", fullName);
+                            data.put("email", email);
+
+                            db.collection("professeurs").document(uid)
+                                    .set(data)
+                                    .addOnSuccessListener(unused -> {
+                                        Toast.makeText(this, "Inscription réussie !", Toast.LENGTH_SHORT).show();
+                                        startActivity(new Intent(RegisterActivity.this, Login.class));
+                                    })
+                                    .addOnFailureListener(e -> {
+                                        Toast.makeText(this, "Erreur Firestore : " + e.getMessage(), Toast.LENGTH_LONG).show();
+                                    });
+                        }
                     } else {
-                        // Échec de l'inscription
                         Toast.makeText(RegisterActivity.this, "Erreur : " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 });

@@ -3,5 +3,7 @@
     <string name="register_text">Don\'t have an account? Register</string>
     <string name="login_text">Press to Logn in </string>
     <string name="google_maps_key">AIzaSyCaKXfJvFAPaFTx5grVWvvtoWvkQxjQZlU</string>
+    <string name="documents_title">Documents du Professeur</string>
+
 
 </resources>

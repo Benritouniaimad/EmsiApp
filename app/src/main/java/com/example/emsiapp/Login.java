@@ -42,18 +42,19 @@ public class Login extends AppCompatActivity {
             return;
         }
 
-        // Utilisation de Firebase Authentication pour la connexion
+
         Task<AuthResult> authResultTask = mAuth.signInWithEmailAndPassword(email, password);
         authResultTask.addOnCompleteListener(this, task -> {
             if (task.isSuccessful()) {
                 // Connexion réussie
                 Toast.makeText(Login.this, "Connexion réussie", Toast.LENGTH_SHORT).show();
-                // Redirection vers la page d'accueil (HomeActivity)
-                Intent intent = new Intent(Login.this, HomeActivity.class); // Remplace HomeActivity par le nom de ta page d'accueil
+
+                Intent intent = new Intent(Login.this, EmploiDuTempsActivity.class);
+
                 startActivity(intent);
-                finish();  // Empêcher de revenir à la page de connexion avec le bouton retour
+                finish();
             } else {
-                // Erreur de connexion
+
                 Toast.makeText(Login.this, "Erreur: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
             }
         });

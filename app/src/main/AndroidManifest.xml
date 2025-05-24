@@ -7,11 +7,17 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28"/>
+
+
+
 
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
+        android:usesCleartextTraffic="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -21,7 +27,7 @@
 
         <!-- Activité de connexion principale (LoginActivity) -->
         <activity
-            android:name=".MapActivity"
+            android:name=".Login"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,7 +38,7 @@
         <!-- Autres activités -->
 
         <activity
-            android:name=".HomeActivity"
+            android:name=".Home"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
@@ -40,6 +46,22 @@
         <activity
             android:name=".RegisterActivity"
             android:exported="false" />
+
+        <activity
+            android:name=".ViewPdfActivity" />
+        <activity
+            android:name=".ConsultationDoc" />
+        <activity android:name=".EmploiDuTempsActivity" />
+        <activity android:name=".RattrapagesScreen" />
+        <activity android:name=".AssistantActivity" />
+        <activity android:name=".AbsencesActivity" />
+        <activity android:name=".HistoriqueAbsencesActivity"/>
+
+
+
+
+
+
 
         <!-- Ajout de la clé API de Google Maps -->
         <meta-data
