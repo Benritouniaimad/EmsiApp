@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="220dp"
+    android:height="220dp"
+    android:viewportWidth="220"
+    android:viewportHeight="220">
+
+    <!-- Character Background Circle -->
+    <path
+        android:fillColor="#E8F5E8"
+        android:pathData="M110,20 C165,20 210,65 210,120 C210,175 165,220 110,220 C55,220 10,175 10,120 C10,65 55,20 110,20 Z" />
+
+    <!-- Face -->
+    <ellipse
+        android:fillColor="#FFDBCB"
+        android:strokeColor="#D7A78F"
+        android:strokeWidth="1.5"
+        android:pathData="M110,80 C130,80 145,95 145,115 L145,145 C145,165 130,180 110,180 C90,180 75,165 75,145 L75,115 C75,95 90,80 110,80 Z" />
+
+    <!-- Hair -->
+    <path
+        android:fillColor="#8D6E63"
+        android:pathData="M110,65 C140,65 165,80 165,100 L165,115 C165,95 145,80 125,80 L95,80 C75,80 55,95 55,115 L55,100 C55,80 80,65 110,65 Z" />
+
+    <!-- Eyes -->
+    <ellipse
+        android:fillColor="#FFFFFF"
+        android:strokeColor="#555555"
+        android:strokeWidth="1"
+        android:pathData="M95,105 C100,105 105,108 105,112 C105,116 100,119 95,119 C90,119 85,116 85,112 C85,108 90,105 95,105 Z" />
+    <ellipse
+        android:fillColor="#FFFFFF"
+        android:strokeColor="#555555"
+        android:strokeWidth="1"
+        android:pathData="M125,105 C130,105 135,108 135,112 C135,116 130,119 125,119 C120,119 115,116 115,112 C115,108 120,105 125,105 Z" />
+
+    <!-- Eye pupils (modified for size, position, and tag type) -->
+    <path
+        android:fillColor="#1B5E20"
+        android:pathData="M95,110 C96,110 97,111 97,112 C97,113 96,114 95,114 C94,114 93,113 93,112 C93,111 94,110 95,110 Z" />
+    <path
+        android:fillColor="#1B5E20"
+        android:pathData="M125,110 C126,110 127,111 127,112 C127,113 126,114 125,114 C124,114 123,113 123,112 C123,111 124,110 125,110 Z" />
+
+    <!-- Glasses -->
+    <ellipse
+        android:fillColor="@android:color/transparent"
+        android:strokeColor="#2E7D32"
+        android:strokeWidth="3"
+        android:pathData="M95,105 C105,105 115,110 115,118 C115,126 105,131 95,131 C85,131 75,126 75,118 C75,110 85,105 95,105 Z" />
+    <ellipse
+        android:fillColor="@android:color/transparent"
+        android:strokeColor="#2E7D32"
+        android:strokeWidth="3"
+        android:pathData="M125,105 C135,105 145,110 145,118 C145,126 135,131 125,131 C115,131 105,126 105,118 C105,110 115,105 125,105 Z" />
+
+    <!-- Glasses bridge -->
+    <line
+        android:strokeColor="#2E7D32"
+        android:strokeWidth="3"
+        android:pathData="M115,112 L105,112" />
+
+    <!-- Nose -->
+    <ellipse
+        android:fillColor="#FFCAB0"
+        android:pathData="M110,125 C113,125 115,127 115,130 C115,133 113,135 110,135 C107,135 105,133 105,130 C105,127 107,125 110,125 Z" />
+
+    <!-- Smile -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:strokeColor="#1B5E20"
+        android:strokeWidth="2.5"
+        android:pathData="M100,145 Q110,155 120,145"
+        android:strokeLineCap="round" />
+
+
+    <!-- Body/Shirt -->
+    <rect
+        android:fillColor="#FFFFFF"
+        android:pathData="M75,175 L145,175 L145,220 L75,220 Z" />
+
+    <!-- Tie -->
+    <path
+        android:fillColor="#2E7D32"
+        android:pathData="M105,175 L115,175 L118,200 L110,210 L102,200 Z" />
+
+    <!-- Collar -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:strokeColor="#CCCCCC"
+        android:strokeWidth="2"
+        android:pathData="M75,175 L110,185 L145,175" />
+
+    <!-- Arms -->
+    <ellipse
+        android:fillColor="#FFDBCB"
+        android:pathData="M60,190 C70,190 75,195 75,205 L75,220 L45,220 L45,205 C45,195 50,190 60,190 Z" />
+    <ellipse
+        android:fillColor="#FFDBCB"
+        android:pathData="M160,190 C170,190 175,195 175,205 L175,220 L145,220 L145,205 C145,195 150,190 160,190 Z" />
+
+    <!-- Books in hand -->
+    <rect
+        android:fillColor="#4CAF50"
+        android:pathData="M40,200 L70,200 L70,215 L40,215 Z" />
+    <rect
+        android:fillColor="#66BB6A"
+        android:pathData="M42,198 L68,198 L68,213 L42,213 Z" />
+
+</vector>

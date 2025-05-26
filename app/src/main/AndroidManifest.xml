@@ -20,13 +20,15 @@
         <activity
             android:name=".HomeActivity"
             android:exported="false" />
-
+        <activity
+            android:name=".Login"
+            android:exported="false" />
         <activity
             android:name=".MarkAbsenceActivity"
             android:exported="false" /> <!-- Peut être supprimé si non nécessaire -->
         <!-- Activité de connexion principale (LoginActivity) -->
         <activity
-            android:name=".Login"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -37,13 +39,24 @@
         <activity
             android:name=".MapActivity"
             android:exported="false" />
-
         <activity
             android:name=".RegisterActivity"
-            android:exported="false" /> <!-- Ajout de la clé API de Google Maps -->
+            android:exported="false" />
+        <activity
+            android:name=".ViewPdfActivity" />
+        <activity
+            android:name=".ConsultationDoc" />
+        <activity android:name=".EmploiDuTempsActivity" />
+        <activity android:name=".RattrapagesScreen" />
+        <activity android:name=".AssistantActivity" />
+        <activity android:name=".AbsencesActivity" />
+        <activity android:name=".HistoriqueAbsencesActivity"/>
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key"/>
+            android:value="@string/google_maps_key" />
+
     </application>
 
 </manifest>
+

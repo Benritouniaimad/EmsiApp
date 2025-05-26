@@ -1,11 +1,223 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/welcome_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="@drawable/gradient_background"
+    android:orientation="vertical">
 
-    tools:context=".MainActivity">
-</LinearLayout>
+    <!-- Floating Elements Background -->
+    <ImageView
+        android:id="@+id/floating_element_1"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="40dp"
+        android:alpha="0.3"
+        android:src="@drawable/ic_book"
+        app:tint="#4CAF50" />
+
+    <ImageView
+        android:id="@+id/floating_element_2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="30dp"
+        android:alpha="0.2"
+        android:src="@drawable/ic_graduation_cap"
+        app:tint="#66BB6A" />
+
+    <ImageView
+        android:id="@+id/floating_element_3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="180dp"
+        android:alpha="0.25"
+        android:src="@drawable/ic_calendar"
+        app:tint="#81C784" />
+
+    <!-- Main Content Container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="32dp">
+
+        <!-- Professor Character Container -->
+        <FrameLayout
+            android:id="@+id/professor_container"
+            android:layout_width="280dp"
+            android:layout_height="280dp"
+            android:layout_marginBottom="32dp">
+
+            <!-- Shadow Effect -->
+            <View
+                android:id="@+id/character_shadow"
+                android:layout_width="240dp"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:alpha="0.3"
+                android:background="@drawable/shadow_oval" />
+
+            <!-- Professor Character -->
+            <ImageView
+                android:id="@+id/professor_character"
+                android:layout_width="220dp"
+                android:layout_height="220dp"
+                android:layout_gravity="center"
+                android:contentDescription="Professor Character"
+                android:scaleType="centerCrop"
+                android:src="@drawable/professor_character" />
+
+            <!-- Floating Chat Bubble -->
+            <RelativeLayout
+                android:id="@+id/chat_bubble_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|end"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp">
+
+                <ImageView
+                    android:id="@+id/chat_bubble_bg"
+                    android:layout_width="120dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/chat_bubble_bg"
+                    app:tint="#4CAF50" />
+
+                <TextView
+                    android:id="@+id/chat_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="12dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Bonjour!"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+        </FrameLayout>
+
+        <!-- Welcome Text -->
+        <TextView
+            android:id="@+id/welcome_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Bienvenue sur"
+            android:textColor="#2E7D32"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/app_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="EMSI SmartPresence"
+            android:textColor="#1B5E20"
+            android:textSize="28sp" />
+
+        <TextView
+            android:id="@+id/subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:text="Gérez les absences de vos étudiants\nde manière simple et efficace"
+            android:textColor="#2E7D32"
+            android:textSize="16sp" />
+
+        <!-- Action Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_login"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="#2E7D32"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Se connecter"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                app:cornerRadius="28dp"
+                app:elevation="6dp"
+                app:icon="@drawable/ic_login"
+                app:iconGravity="textStart"
+                app:iconPadding="8dp"
+                app:iconTint="@android:color/white" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_register"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:backgroundTint="@android:color/transparent"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Créer un compte"
+                android:textColor="#2E7D32"
+                android:textSize="16sp"
+                app:cornerRadius="28dp"
+                app:icon="@drawable/ic_person_add"
+                app:iconGravity="textStart"
+                app:iconPadding="8dp"
+                app:iconTint="#4CAF50"
+                app:strokeColor="#4CAF50"
+                app:strokeWidth="2dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Animated Dots Indicator -->
+    <LinearLayout
+        android:id="@+id/dots_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/dot1"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/dot_indicator"
+            android:backgroundTint="#4CAF50" />
+
+        <View
+            android:id="@+id/dot2"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/dot_indicator"
+            android:backgroundTint="#A5D6A7" />
+
+        <View
+            android:id="@+id/dot3"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:background="@drawable/dot_indicator"
+            android:backgroundTint="#A5D6A7" />
+
+    </LinearLayout>
+
+</RelativeLayout>

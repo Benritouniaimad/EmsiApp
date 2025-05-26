@@ -49,7 +49,7 @@ public class Login extends AppCompatActivity {
                 // Connexion réussie
                 Toast.makeText(Login.this, "Connexion réussie", Toast.LENGTH_SHORT).show();
                 // Redirection vers la page d'accueil (HomeActivity)
-                Intent intent = new Intent(Login.this, HomeActivity.class); // Remplace HomeActivity par le nom de ta page d'accueil
+                Intent intent = new Intent(Login.this, HomeActivity.class);
                 startActivity(intent);
                 finish();  // Empêcher de revenir à la page de connexion avec le bouton retour
             } else {
@@ -58,6 +58,8 @@ public class Login extends AppCompatActivity {
             }
         });
     }
+
+
 
     public void redirectToRegister(View view) {
         Intent intent = new Intent(Login.this, RegisterActivity.class);

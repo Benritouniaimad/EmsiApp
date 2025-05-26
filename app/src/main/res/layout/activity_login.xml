@@ -5,157 +5,375 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/photo2"
+    android:background="@drawable/gradient_background_login"
     tools:context=".Login">
 
-    <!-- Overlay semi-transparent pour améliorer la lisibilité -->
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#80000000" />
+    <!-- Floating Elements for Visual Appeal -->
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="30dp"
+        android:alpha="0.1"
+        android:src="@drawable/ic_book1"
+        app:tint="@color/white" />
 
-    <!-- Conteneur blanc arrondi -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_marginHorizontal="20dp"
-        android:background="@drawable/rounded_container_background"
-        android:orientation="vertical"
-        android:padding="20dp">
-
-        <!-- Titre de l'app -->
-
-        <!-- Sous-titre ou slogan -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:fontFamily="serif"
-            android:text="Emsi Smart Presence"
-            android:textColor="@color/black"
-            android:textSize="25sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="30dp"
-            android:fontFamily="sans-serif-light"
-            android:text="L'innovation et l'intelligence au service de la gestion des présences."
-            android:textAlignment="center"
-            android:textColor="@color/dark_green"
-            android:textSize="16sp" />
-
-        <!-- Texte de Login -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:fontFamily="serif"
-            android:text="Welcome Back!"
-            android:textColor="@color/black"
-            android:textSize="28sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="20dp"
-            android:text="Sign in to continue"
-            android:textColor="@color/dark_gray"
-            android:textSize="16sp" />
-
-        <!-- Champ Email -->
-        <EditText
-            android:id="@+id/et_email"
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:layout_marginHorizontal="10dp"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/input_background_white"
-            android:drawableStart="@drawable/ic_email"
-            android:drawablePadding="10dp"
-            app:drawableTint="@color/dark_green"
-            android:hint="Enter Email or Username"
-            android:inputType="textEmailAddress"
-            android:paddingStart="15dp"
-            android:paddingEnd="15dp" />
-
-        <!-- Champ Mot de passe -->
-        <EditText
-            android:id="@+id/et_password"
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:layout_marginHorizontal="10dp"
-            android:layout_marginTop="15dp"
-            android:background="@drawable/input_background_white"
-            android:drawableStart="@drawable/ic_lock"
-            android:drawablePadding="10dp"
-            app:drawableTint="@color/dark_green"
-            android:hint="Enter your Password"
-            android:inputType="textPassword"
-            android:paddingStart="15dp"
-            android:paddingEnd="15dp" />
-
-        <!-- Texte "Mot de passe oublié" -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:text="Forgot your password?"
-            android:textColor="@color/dark_green"
-            android:textSize="14sp" />
-
-        <!-- Bouton de connexion -->
-        <Button
-            android:id="@+id/btn_login"
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:layout_gravity="center"
-            android:layout_marginHorizontal="10dp"
-            android:layout_marginTop="25dp"
-            android:backgroundTint="@color/blue"
-            android:text="Login"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
-
-        <!-- Texte d'inscription -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:onClick="redirectToRegister"
-            android:text="Don't have account? Sign up"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:minHeight="48dp"
-            android:minWidth="48dp"
-            android:gravity="center"
-            android:padding="8dp" />
-
-    </LinearLayout>
-
-    <!-- Bouton de fermeture -->
-    <ImageButton
-        android:id="@+id/btn_close"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_margin="16dp"
-        android:background="@drawable/circle_background"
-        android:contentDescription="Close button"
-        android:padding="8dp"
-        android:src="@drawable/ic_close"
-        app:tint="@color/dark_gray" />
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="40dp"
+        android:alpha="0.1"
+        android:src="@drawable/ic_graduation_cap"
+        app:tint="@color/white" />
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="100dp"
+        android:layout_marginStart="50dp"
+        android:alpha="0.1"
+        android:src="@drawable/ic_calendar"
+        app:tint="@color/white" />
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/login_character"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="40dp"
+            android:gravity="center">
+
+            <!-- Logo/Character Section -->
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp">
+
+                <!-- Character Shadow -->
+                <View
+                    android:layout_width="120dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:alpha="0.2"
+                    android:background="@drawable/shadow_oval" />
+
+                <!-- Professor Character -->
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="EMSI Logo"
+                    android:src="@drawable/professor_character"
+                    android:background="@drawable/circle_white_background"
+                    android:padding="8dp" />
+
+                <!-- Floating Greeting -->
+                <TextView
+                    android:layout_width="53dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|end"
+                    android:layout_marginTop="-5dp"
+                    android:layout_marginEnd="-10dp"
+                    android:background="@drawable/chat_bubble_green"
+                    android:fontFamily="@font/poppins_medium"
+                    android:padding="6dp"
+                    android:text="Salut!"
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+
+            </FrameLayout>
+
+            <!-- Main Content Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="12dp"
+                android:backgroundTint="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="32dp">
+
+                    <!-- App Title Section -->
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="8dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="EMSI SmartPresence"
+                        android:textColor="@color/dark_green"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="32dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:lineSpacingExtra="2dp"
+                        android:text="L'innovation et l'intelligence au service de la gestion des présences"
+                        android:textAlignment="center"
+                        android:textColor="@color/text_secondary1"
+                        android:textSize="14sp" />
+
+                    <!-- Welcome Back Section -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="4dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="Bon retour!"
+                        android:textColor="@color/text_primary1"
+                        android:textSize="28sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="32dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Connectez-vous pour continuer"
+                        android:textColor="@color/text_secondary1"
+                        android:textSize="16sp" />
+
+                    <!-- Email Input -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        app:boxBackgroundColor="@color/input_background"
+                        app:boxBackgroundMode="filled"
+                        app:boxCornerRadiusBottomEnd="12dp"
+                        app:boxCornerRadiusBottomStart="12dp"
+                        app:boxCornerRadiusTopEnd="12dp"
+                        app:boxCornerRadiusTopStart="12dp"
+                        app:boxStrokeColor="@color/primary_green"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="2dp"
+                        app:hintTextColor="@color/dark_green"
+                        app:startIconDrawable="@drawable/ic_email1"
+                        app:startIconTint="@color/dark_green">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
+                            android:hint="Email ou nom d'utilisateur"
+                            android:inputType="textEmailAddress"
+                            android:textColor="@color/text_primary1"
+                            android:textSize="16sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Password Input -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        app:boxBackgroundColor="@color/input_background"
+                        app:boxBackgroundMode="filled"
+                        app:boxCornerRadiusBottomEnd="12dp"
+                        app:boxCornerRadiusBottomStart="12dp"
+                        app:boxCornerRadiusTopEnd="12dp"
+                        app:boxCornerRadiusTopStart="12dp"
+                        app:boxStrokeColor="@color/dark_green"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="2dp"
+                        app:endIconMode="password_toggle"
+                        app:endIconTint="@color/dark_green"
+                        app:hintTextColor="@color/dark_green"
+                        app:startIconDrawable="@drawable/ic_lock1"
+                        app:startIconTint="@color/dark_green">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_password"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
+                            android:hint="Mot de passe"
+                            android:inputType="textPassword"
+                            android:textColor="@color/text_primary1"
+                            android:textSize="16sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Forgot Password -->
+                    <TextView
+                        android:id="@+id/tv_forgot_password"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginBottom="32dp"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center_vertical"
+                        android:minHeight="48dp"
+                        android:padding="8dp"
+                        android:text="Mot de passe oublié?"
+                        android:textColor="@color/dark_green"
+                        android:textSize="14sp" />
+
+
+                    <!-- Login Button -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_login"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:layout_marginBottom="24dp"
+                        android:backgroundTint="@color/dark_green"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="Se connecter"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        app:cornerRadius="28dp"
+                        app:elevation="8dp"
+                        app:icon="@drawable/ic_login1"
+                        app:iconGravity="textStart"
+                        app:iconPadding="12dp"
+                        app:iconTint="@color/white" />
+
+                    <!-- Register Link -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Pas de compte?"
+                            android:textColor="@color/text_secondary1"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tv_forgot_password_ic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_marginBottom="3dp"
+                            android:background="?android:attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center_vertical"
+                            android:minHeight="48dp"
+                            android:onClick="redirectToRegister"
+                            android:padding="8dp"
+                            android:text="Créer un compte?"
+                            android:textColor="@color/dark_green"
+                            android:textSize="14sp" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Alternative Login Options -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="1dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="16dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Ou connectez-vous avec"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:alpha="0.8" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <!-- Google Login -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginEnd="16dp"
+                        app:cardCornerRadius="30dp"
+                        app:cardElevation="6dp"
+                        android:backgroundTint="@color/white"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_google"
+                            android:contentDescription="Google Login" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Facebook Login -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        app:cardCornerRadius="30dp"
+                        app:cardElevation="6dp"
+                        android:backgroundTint="@color/white"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_facebook"
+                            app:tint="#1877F2"
+                            android:contentDescription="Facebook Login" />
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- Close Button -->
+
 
 </RelativeLayout>

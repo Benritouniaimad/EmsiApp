@@ -1,0 +1,18 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="12dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="6dp"
+    app:cardCornerRadius="24dp"
+    android:backgroundTint="@color/white">
+
+    <TextView
+        android:id="@+id/tvInfos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp"
+        android:textSize="16sp"
+        android:textColor="@color/text_primary1"
+        android:fontFamily="@font/poppins_regular" />
+</androidx.cardview.widget.CardView>

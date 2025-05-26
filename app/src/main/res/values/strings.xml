@@ -4,4 +4,29 @@
     <string name="login_text">Press to Logn in </string>
     <string name="google_maps_key">AIzaSyCaKXfJvFAPaFTx5grVWvvtoWvkQxjQZlU</string>
     <string name="map_description">Carte montrant les sites EMSI et votre position actuelle</string>
+    <string name="documents_title">Documents du Professeur</string>
+    <string name="titre_emploi">Consulter Emploi du Temps</string>
+    <string name="annee_scolaire">Année Scolaire</string>
+    <string name="semestre">Semestre</string>
+    <string name="afficher_emploi">Afficher Emploi du Temps</string>
+    <string name="telecharger_pdf">Télécharger en PDF</string>
+    <string name="spinner_annee_desc">Choisir l`année scolaire</string>
+    <string name="spinner_semestre_desc">Choisir le semestre</string>
+    <string name="emploi_table_desc">Tableau des cours programmés</string>
+    <string name="liste_etudiants">Liste des étudiants affichée</string>
+    <string name="liste_rattrapages">Liste des séances de rattrapage</string>
+    <string name="liste_messages">Historique des messages affiché</string>
+    <string name="nouvelle_conversation">Réinitialiser la conversation</string>
+    <string name="hint_question">Écris ici...</string>
+    <string name="default_web_client_id">89642139219-l0m43loaca7hf3j2i8q8r93gbgk7ovr2.apps.googleusercontent.com</string>
+
+    <!-- Facebook configuration strings -->
+    <string name="facebook_app_id">YOUR_FB_APP_ID</string>
+    <string name="fb_login_protocol_scheme">fbYOUR_FB_APP_ID</string>
+    <string name="facebook_client_token">YOUR_CLIENT_TOKEN</string>
+
+    <!-- Authentication strings -->
+    <string name="sign_in_with_google">Sign in with Google</string>
+    <string name="sign_in_with_facebook">Sign in with Facebook</string>
+    <string name="sign_in_with_twitter">Sign in with Twitter</string>
 </resources>

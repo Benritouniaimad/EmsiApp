@@ -13,4 +13,144 @@
     <color name="light_gray1">#F5F5F5</color>
     <color name="accent_orange">#FF9800</color>
     <color name="accent_red">#E53935</color>
+    <color name="purple_500">#6200EE</color>
+
+
+
+
+
+
+    <color name="green_primary">#4CAF50</color>
+    <color name="green_primary_dark">#2E7D32</color>
+    <color name="green_primary_light">#81C784</color>
+
+    <!-- Secondary Green Colors -->
+    <color name="green_50">#E8F5E8</color>
+    <color name="green_100">#C8E6C9</color>
+    <color name="green_200">#A5D6A7</color>
+    <color name="green_300">#81C784</color>
+    <color name="green_400">#66BB6A</color>
+    <color name="green_500">#4CAF50</color>
+    <color name="green_600">#43A047</color>
+    <color name="green_700">#388E3C</color>
+    <color name="green_800">#2E7D32</color>
+    <color name="green_900">#1B5E20</color>
+
+    <!-- Background Colors -->
+    <color name="background_light">#F8FFF8</color>
+    <color name="background_gradient_start">#E8F5E8</color>
+    <color name="background_gradient_end">#C8E6C9</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary">#1B5E20</color>
+    <color name="text_secondary">#2E7D32</color>
+    <color name="text_hint">#81C784</color>
+
+    <!-- Standard Colors -->
+
+
+    <!-- Status Colors -->
+    <color name="success">#4CAF50</color>
+    <color name="warning">#FF9800</color>
+    <color name="error">#F44336</color>
+    <color name="info">#2196F3</color>
+
+
+
+
+
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/green_primary</item>
+        <item name="colorPrimaryDark">@color/green_primary_dark</item>
+        <item name="colorAccent">@color/green_primary_light</item>
+        <item name="android:windowBackground">@color/background_light</item>
+        <item name="android:statusBarColor">@color/green_primary_dark</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <!-- Welcome Activity Theme -->
+    <style name="WelcomeTheme" parent="AppTheme">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <!-- Button Styles -->
+    <style name="PrimaryButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="backgroundTint">@color/green_primary</item>
+        <item name="cornerRadius">28dp</item>
+        <item name="android:elevation">6dp</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
+    <style name="SecondaryButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/green_primary</item>
+        <item name="strokeColor">@color/green_primary</item>
+        <item name="strokeWidth">2dp</item>
+        <item name="cornerRadius">28dp</item>
+        <item name="backgroundTint">@color/transparent</item>
+    </style>
+
+    <!-- Text Styles -->
+    <style name="TitleText">
+        <item name="android:textSize">28sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="SubtitleText">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:gravity">center</item>
+        <item name="android:lineSpacingExtra">4dp</item>
+    </style>
+
+    <style name="WelcomeText">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/green_primary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+
+
+
+    <dimen name="spacing_xs">4dp</dimen>
+    <dimen name="spacing_sm">8dp</dimen>
+    <dimen name="spacing_md">16dp</dimen>
+    <dimen name="spacing_lg">24dp</dimen>
+    <dimen name="spacing_xl">32dp</dimen>
+    <dimen name="spacing_xxl">48dp</dimen>
+
+    <!-- Button dimensions -->
+    <dimen name="button_height">56dp</dimen>
+    <dimen name="button_corner_radius">28dp</dimen>
+
+    <!-- Character dimensions -->
+    <dimen name="character_size">220dp</dimen>
+    <dimen name="character_container_size">280dp</dimen>
+
+    <!-- Text sizes -->
+    <dimen name="text_size_title">28sp</dimen>
+    <dimen name="text_size_subtitle">16sp</dimen>
+    <dimen name="text_size_welcome">24sp</dimen>
+    <dimen name="text_size_button">16sp</dimen>
+    <dimen name="text_size_chat">12sp</dimen>
+
+    <color name="primary_green">#4CAF50</color>
+    <color name="text_primary1">#212121</color>
+    <color name="text_secondary1">#757575</color>
+    <color name="input_background">#F5F5F5</color>
+
+
+
+
 </resources>
