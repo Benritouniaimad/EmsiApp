@@ -47,6 +47,7 @@ dependencies {
     implementation(libs.firebase.auth)
     implementation("com.google.firebase:firebase-firestore")
     implementation("com.google.android.gms:play-services-auth:20.7.0")
+    implementation ("com.itextpdf:itext7-core:7.2.5")
 
     implementation ("com.google.android.gms:play-services-maps:18.1.0")
     implementation ("de.hdodenhof:circleimageview:3.1.0")

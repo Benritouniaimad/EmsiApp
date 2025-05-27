@@ -154,10 +154,12 @@ public class EmploiDuTempsActivity extends BaseActivity {
                         if (emploi.getJour().equals(jour)
                                 && emploi.getHeureDebut().equals(heure)
                                 && emploi.getNiveau().equals(niveau)) {
-                            contenu = emploi.getHeureDebut() + " - " + emploi.getHeureFin()
-                                    + "\n" + emploi.getMatiere()
-                                    + "\nSalle " + emploi.getSalle()
-                                    + "\n" + emploi.getNiveau();
+                            contenu = String.valueOf(emploi.getHeureDebut()) + " - " + String.valueOf(emploi.getHeureFin())
+                                    + "\n" + String.valueOf(emploi.getMatiere())
+                                    + "\nSalle : " + String.valueOf(emploi.getSalle())
+                                    + "\n" + String.valueOf(emploi.getNiveau())
+                                    + "\nSite : " + String.valueOf(emploi.getSite());
+
                             break;
                         }
                     }
@@ -217,7 +219,9 @@ public class EmploiDuTempsActivity extends BaseActivity {
             String line = emploi.getHeureDebut() + " - " + emploi.getHeureFin()
                     + "\n" + emploi.getMatiere()
                     + "\nSalle " + emploi.getSalle()
-                    + "\n" + emploi.getJour() + " - Niveau " + emploi.getNiveau();
+                    + "\n" + emploi.getJour() + " - Niveau " + emploi.getNiveau()
+                    + "\nSite : " + emploi.getSite();
+
             for (String l : line.split("\n")) {
                 canvas.drawText(l, 50, y, paint);
                 y += 20;

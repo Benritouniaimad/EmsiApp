@@ -49,7 +49,7 @@ public class Login extends AppCompatActivity {
                 // Connexion réussie
                 Toast.makeText(Login.this, "Connexion réussie", Toast.LENGTH_SHORT).show();
 
-                Intent intent = new Intent(Login.this, EmploiDuTempsActivity.class);
+                Intent intent = new Intent(Login.this, ParametresActivity.class);
 
                 startActivity(intent);
                 finish();

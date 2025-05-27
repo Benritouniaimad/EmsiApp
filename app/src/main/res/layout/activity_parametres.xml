@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E3F2FD"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Titre -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Paramètres"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#1A237E"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Carte contenant les champs -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:elevation="6dp"
+            android:layout_marginBottom="32dp"
+            android:layout_marginTop="12dp"
+            android:layout_margin="8dp">
+
+            <!-- Switch dark mode -->
+            <Switch
+                android:id="@+id/switchDarkMode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:minHeight="48dp"
+                android:text="Activer le mode sombre"
+                android:textColor="#000000" />
+
+            <!-- Langue -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Langue de l'application"
+                android:textColor="#000000" />
+
+            <Spinner
+                android:id="@+id/spinnerLangue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:minHeight="48dp" />
+
+            <!-- Pseudo -->
+            <EditText
+                android:id="@+id/editUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:hint="Nouveau pseudo"
+                android:inputType="textPersonName"
+                android:minHeight="48dp" />
+            <Button
+                android:id="@+id/btnUpdateUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mettre à jour le pseudo"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Email -->
+            <EditText
+                android:id="@+id/editNewEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:hint="Nouvelle adresse email"
+                android:inputType="textEmailAddress"
+                android:minHeight="48dp" />
+            <Button
+                android:id="@+id/btnUpdateEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Changer l'email"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Changement mot de passe -->
+            <EditText
+                android:id="@+id/editOldPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:hint="Mot de passe actuel"
+                android:inputType="textPassword"
+                android:minHeight="48dp" />
+
+            <EditText
+                android:id="@+id/editNewPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:hint="Nouveau mot de passe"
+                android:inputType="textPassword"
+                android:minHeight="48dp" />
+            <Button
+                android:id="@+id/btnUpdatePassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Changer le mot de passe"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Déconnexion -->
+            <Button
+                android:id="@+id/btnLogout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Se déconnecter"
+                android:backgroundTint="#D32F2F"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

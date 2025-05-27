@@ -11,6 +11,8 @@ public class Emploi {
     private String heureFin;
     private String matiere;
     private String salle;
+    private String site;
+    private String niveau;
 
     // Constructeur vide (obligatoire pour Firebase)
     public Emploi() {
@@ -18,7 +20,8 @@ public class Emploi {
 
     // Constructeur complet
     public Emploi(String professeurId, String nomProfesseur, String semestre, String anneeScolaire,
-                  String jour, String heureDebut, String heureFin, String matiere, String salle) {
+                  String jour, String heureDebut, String heureFin, String matiere, String salle,
+                  String site, String niveau) {
         this.professeurId = professeurId;
         this.nomProfesseur = nomProfesseur;
         this.semestre = semestre;
@@ -28,6 +31,8 @@ public class Emploi {
         this.heureFin = heureFin;
         this.matiere = matiere;
         this.salle = salle;
+        this.site = site;
+        this.niveau = niveau;
     }
 
     // Getters et Setters
@@ -49,15 +54,6 @@ public class Emploi {
 
     public String getSemestre() {
         return semestre;
-    }
-    private String niveau;
-
-    public String getNiveau() {
-        return niveau;
-    }
-
-    public void setNiveau(String niveau) {
-        this.niveau = niveau;
     }
 
     public void setSemestre(String semestre) {
@@ -110,5 +106,21 @@ public class Emploi {
 
     public void setSalle(String salle) {
         this.salle = salle;
+    }
+
+    public String getSite() {
+        return site;
+    }
+
+    public void setSite(String site) {
+        this.site = site;
+    }
+
+    public String getNiveau() {
+        return niveau;
+    }
+
+    public void setNiveau(String niveau) {
+        this.niveau = niveau;
     }
 }

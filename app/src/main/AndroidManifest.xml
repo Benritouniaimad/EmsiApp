@@ -13,6 +13,7 @@
 
 
 
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -56,6 +57,10 @@
         <activity android:name=".AssistantActivity" />
         <activity android:name=".AbsencesActivity" />
         <activity android:name=".HistoriqueAbsencesActivity"/>
+        <activity android:name=".PlanCoursActivity" />
+        <activity android:name=".AbsenceAutoActivity"/>
+        <activity android:name=".ParametresActivity"/>
+
 
 
 

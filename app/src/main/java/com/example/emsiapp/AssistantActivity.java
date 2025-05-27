@@ -47,7 +47,7 @@ public class AssistantActivity extends BaseActivity {
     private String uid;
 
     private final OkHttpClient client = new OkHttpClient();
-    private static final String URL_BACKEND = "http://192.168.137.1:3002/ask";
+    private static final String URL_BACKEND = "http://192.168.11.106:3002/ask";
 
     public static final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
 
